@@ -1,0 +1,7 @@
+<h1>Welcome to the Genres Page</h1>
+<h3><%= link_to  "Create a new genre", new_genre_path %></h3>
+<h3><%= link_to  "Go to Song Index Page", songs_path %></h3><br>
+
+<% @genres.each do |genre|%>
+    <h5><%= link_to genre.name, genre %> </h5>
+<% end %>

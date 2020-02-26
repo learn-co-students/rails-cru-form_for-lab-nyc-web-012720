@@ -1,0 +1,10 @@
+<h1>Welcome to <%=@song.name%> Song Page </h1>
+
+<h5><%= link_to  "Return to Song Index Page", songs_path %></h5>
+<h5><%= link_to  "Edit this Song", edit_song_path(@song) %></h5>
+<h5> <%= button_to "Delete this Song", song_path(@song), method: :delete%> </h5>
+
+<h3>Song Name: <%= @song.name%> </h3><br>
+
+<p><h3>Song Belongs to this artist: <%= link_to @song.artist.name, artist_path(@song.artist_id)%> </h3></p>
+<p><h3>Song Belongs to this genre: <%= link_to @song.genre.name, genre_path(@song.genre_id)%> </h3></p>

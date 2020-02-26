@@ -1,0 +1,12 @@
+<h1>Welcome to <%=@genre.name%> Page </h1>
+
+<h5> <%= link_to  "Return to Genre Index Page", genres_path %> </h5>
+<h5><%= link_to "Edit Genre", edit_genre_path(@genre) %></h5>
+<h5><%= button_to "Delete Genre", genre_path(@genre), method: :delete %></h5>
+
+<h3> Genre Name: <%=@genre.name%> </h3><br>
+<p><h3>Genre Songs:</h3></p>
+<%@genre.songs.each do |song|%>
+    <p><h5> <%= link_to song.name, song%> </h5></p>
+<% end %>
+
